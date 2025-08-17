@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LockdownMode</string>
+    <string name="accessibility_service_description">Accessibility for automated lockdown actions</string>
+</resources>

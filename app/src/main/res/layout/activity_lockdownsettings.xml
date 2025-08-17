@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181111">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#181111"
+        android:padding="16dp"
+        android:paddingBottom="8dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Back"
+            android:src="@drawable/ic_arrow_left"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lockdown Mode"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:letterSpacing="-0.015"
+            android:gravity="center"
+            android:paddingEnd="48dp" />
+    </LinearLayout>
+
+    <!-- Features Section -->
+    <TextView
+        android:id="@+id/features_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="Features"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:letterSpacing="-0.015"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Disable Camera -->
+    <LinearLayout
+        android:id="@+id/camera_item"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#181111"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/features_header"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disable Camera"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disables all cameras"
+                android:textColor="#B89D9F"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:maxLines="2"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/camera_switch"
+            android:layout_width="51dp"
+            android:layout_height="31dp"
+            android:background="#382929"
+            app:thumbTint="#FFFFFF"
+            app:trackTint="#382929"
+            app:thumbElevation="8dp"
+            app:switchPadding="2dp"
+            app:trackDecorationTint="#E92932" />
+    </LinearLayout>
+
+    <!-- Disable Microphone -->
+    <LinearLayout
+        android:id="@+id/microphone_item"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#181111"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/camera_item"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disable Microphone"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mutes all microphones"
+                android:textColor="#B89D9F"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:maxLines="2"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/microphone_switch"
+            android:layout_width="51dp"
+            android:layout_height="31dp"
+            android:background="#382929"
+            app:thumbTint="#FFFFFF"
+            app:trackTint="#382929"
+            app:thumbElevation="8dp"
+            app:switchPadding="2dp"
+            app:trackDecorationTint="#E92932" />
+    </LinearLayout>
+
+    <!-- Disable GPS -->
+    <LinearLayout
+        android:id="@+id/gps_item"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#181111"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/microphone_item"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disable GPS"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Turns off GPS and location services"
+                android:textColor="#B89D9F"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:maxLines="2"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/gps_switch"
+            android:layout_width="51dp"
+            android:layout_height="31dp"
+            android:background="#382929"
+            app:thumbTint="#FFFFFF"
+            app:trackTint="#382929"
+            app:thumbElevation="8dp"
+            app:switchPadding="2dp"
+            app:trackDecorationTint="#E92932" />
+    </LinearLayout>
+
+    <!-- Clear Recent Apps -->
+    <LinearLayout
+        android:id="@+id/recent_apps_item"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#181111"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/gps_item"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear Recent Apps"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clears recent apps list"
+                android:textColor="#B89D9F"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:maxLines="2"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/recent_apps_switch"
+            android:layout_width="51dp"
+            android:layout_height="31dp"
+            android:background="#382929"
+            app:thumbTint="#FFFFFF"
+            app:trackTint="#382929"
+            app:thumbElevation="8dp"
+            app:switchPadding="2dp"
+            app:trackDecorationTint="#E92932" />
+    </LinearLayout>
+
+    <!-- Kill Background Processes -->
+    <LinearLayout
+        android:id="@+id/background_processes_item"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#181111"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/recent_apps_item"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kill Background Processes"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stops background processes"
+                android:textColor="#B89D9F"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:maxLines="2"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/background_processes_switch"
+            android:layout_width="51dp"
+            android:layout_height="31dp"
+            android:background="#382929"
+            app:thumbTint="#FFFFFF"
+            app:trackTint="#382929"
+            app:thumbElevation="8dp"
+            app:switchPadding="2dp"
+            app:trackDecorationTint="#E92932" />
+    </LinearLayout>
+
+    <!-- Minimal Launcher -->
+    <LinearLayout
+        android:id="@+id/launcher_item"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#181111"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/background_processes_item"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minimal Launcher"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Switches to a basic launcher"
+                android:textColor="#B89D9F"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:maxLines="2"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/launcher_switch"
+            android:layout_width="51dp"
+            android:layout_height="31dp"
+            android:background="#382929"
+            app:thumbTint="#FFFFFF"
+            app:trackTint="#382929"
+            app:thumbElevation="8dp"
+            app:switchPadding="2dp"
+            app:trackDecorationTint="#E92932" />
+    </LinearLayout>
+
+    <!-- Activation Section -->
+    <TextView
+        android:id="@+id/activation_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="Activation"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:letterSpacing="-0.015"
+        app:layout_constraintTop_toBottomOf="@id/launcher_item"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Delayed Activation -->
+    <LinearLayout
+        android:id="@+id/delayed_activation_item"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#181111"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/activation_header"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delayed Activation"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delay before mode activates"
+                android:textColor="#B89D9F"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:maxLines="2"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/delay_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <!-- Emergency Contact Section -->
+    <TextView
+        android:id="@+id/emergency_contact_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:text="Emergency Contact"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:letterSpacing="-0.015"
+        app:layout_constraintTop_toBottomOf="@id/delayed_activation_item"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Select Contact -->
+    <LinearLayout
+        android:id="@+id/contact_item"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#181111"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/emergency_contact_header"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Contact"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/contact_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact to notify in emergency"
+                android:textColor="#B89D9F"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:maxLines="2"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_caret_right"
+            android:contentDescription="Select Contact"
+            app:tint="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#261C1C"
+        android:paddingTop="8dp"
+        android:paddingBottom="12dp"
+        android:paddingHorizontal="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Home Icon (Inactive) -->
+        <LinearLayout
+            android:id="@+id/nav_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_house"
+                android:contentDescription="Home"
+                app:tint="#B89D9F" />
+        </LinearLayout>
+
+        <!-- Shield Icon (Active) -->
+        <LinearLayout
+            android:id="@+id/nav_shield"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_shield"
+                android:contentDescription="System Defend"
+                app:tint="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#261C1C"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
