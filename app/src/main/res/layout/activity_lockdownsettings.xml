@@ -100,14 +100,12 @@
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/camera_switch"
-            android:layout_width="51dp"
-            android:layout_height="31dp"
-            android:background="#382929"
-            app:thumbTint="#FFFFFF"
-            app:trackTint="#382929"
-            app:thumbElevation="8dp"
-            app:switchPadding="2dp"
-            app:trackDecorationTint="#E92932" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbTint="@color/switch_thumb"
+            app:trackTint="@color/switch_track"
+            app:switchPadding="4dp"
+            style="@style/Widget.Material3.Switch" />
     </LinearLayout>
 
     <!-- Disable Microphone -->
@@ -151,14 +149,12 @@
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/microphone_switch"
-            android:layout_width="51dp"
-            android:layout_height="31dp"
-            android:background="#382929"
-            app:thumbTint="#FFFFFF"
-            app:trackTint="#382929"
-            app:thumbElevation="8dp"
-            app:switchPadding="2dp"
-            app:trackDecorationTint="#E92932" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbTint="@color/switch_thumb"
+            app:trackTint="@color/switch_track"
+            app:switchPadding="4dp"
+            style="@style/Widget.Material3.Switch" />
     </LinearLayout>
 
     <!-- Disable GPS -->
@@ -202,14 +198,12 @@
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/gps_switch"
-            android:layout_width="51dp"
-            android:layout_height="31dp"
-            android:background="#382929"
-            app:thumbTint="#FFFFFF"
-            app:trackTint="#382929"
-            app:thumbElevation="8dp"
-            app:switchPadding="2dp"
-            app:trackDecorationTint="#E92932" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbTint="@color/switch_thumb"
+            app:trackTint="@color/switch_track"
+            app:switchPadding="4dp"
+            style="@style/Widget.Material3.Switch" />
     </LinearLayout>
 
     <!-- Clear Recent Apps -->
@@ -253,14 +247,12 @@
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/recent_apps_switch"
-            android:layout_width="51dp"
-            android:layout_height="31dp"
-            android:background="#382929"
-            app:thumbTint="#FFFFFF"
-            app:trackTint="#382929"
-            app:thumbElevation="8dp"
-            app:switchPadding="2dp"
-            app:trackDecorationTint="#E92932" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbTint="@color/switch_thumb"
+            app:trackTint="@color/switch_track"
+            app:switchPadding="4dp"
+            style="@style/Widget.Material3.Switch" />
     </LinearLayout>
 
     <!-- Kill Background Processes -->
@@ -304,14 +296,12 @@
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/background_processes_switch"
-            android:layout_width="51dp"
-            android:layout_height="31dp"
-            android:background="#382929"
-            app:thumbTint="#FFFFFF"
-            app:trackTint="#382929"
-            app:thumbElevation="8dp"
-            app:switchPadding="2dp"
-            app:trackDecorationTint="#E92932" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbTint="@color/switch_thumb"
+            app:trackTint="@color/switch_track"
+            app:switchPadding="4dp"
+            style="@style/Widget.Material3.Switch" />
     </LinearLayout>
 
     <!-- Minimal Launcher -->
@@ -355,14 +345,12 @@
 
         <com.google.android.material.switchmaterial.SwitchMaterial
             android:id="@+id/launcher_switch"
-            android:layout_width="51dp"
-            android:layout_height="31dp"
-            android:background="#382929"
-            app:thumbTint="#FFFFFF"
-            app:trackTint="#382929"
-            app:thumbElevation="8dp"
-            app:switchPadding="2dp"
-            app:trackDecorationTint="#E92932" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbTint="@color/switch_thumb"
+            app:trackTint="@color/switch_track"
+            app:switchPadding="4dp"
+            style="@style/Widget.Material3.Switch" />
     </LinearLayout>
 
     <!-- Activation Section -->
